@@ -1,0 +1,15 @@
+.alert {
+  margin-top: 70px;
+}
+.panel {
+  margin-top: 20px;
+}
+.check label {
+  font-weight: normal;
+}
+.check label:hover {
+  cursor: pointer;
+}
+.linkVoltar {
+  margin-top: 8px;
+}
