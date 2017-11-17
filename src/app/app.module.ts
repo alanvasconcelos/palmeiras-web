@@ -5,16 +5,18 @@ import { routing } from './app.routing';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { BlogComponent } from './blog/blog.component';
+import { SocioModule } from './socio/socio.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    BlogComponent
+    BlogComponent,
   ],
   imports: [
     BrowserModule,
-    routing
+    routing,
+    SocioModule
   ],
   providers: [],
   bootstrap: [AppComponent]

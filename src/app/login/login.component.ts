@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -10,11 +11,21 @@ export class LoginComponent {
   erroLogin;
   mensagemErro = "Email ou senha inválidos";
 
-  constructor() {
+  constructor(
+    private router: Router
+  ) {
     this.erroLogin = false;
   }
 
-  logar() {
-    this.erroLogin = !this.erroLogin;
+  logar(email, senha) {
+    if (email === 'socio' && senha === 'socio') {
+      //redireciona
+      this.router.navigate(['socio']);
+      console.log(email);
+      console.log(senha);
+    } else {
+      this.erroLogin = true;
+    }
+
   }
 }
