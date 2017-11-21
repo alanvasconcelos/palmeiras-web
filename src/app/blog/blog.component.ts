@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+
+declare var $: any;
 
 @Component({
   selector: 'app-blog',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BlogComponent implements OnInit {
 
-  constructor() { }
+  @ViewChild("carousel") carousel: ElementRef;
+  anoAtual: number;
 
+  constructor() {
+  }
+  
   ngOnInit() {
+    this.anoAtual = new Date().getFullYear();
+    $(this.carousel.nativeElement).carousel();
   }
 
 }

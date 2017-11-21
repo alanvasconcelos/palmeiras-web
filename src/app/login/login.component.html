@@ -1,33 +1,25 @@
 <div class="container">
   <div class="row">
-    <div class="col-sm-4 col-sm-offset-4 col-xs-8 col-xs-offset-2">
-      <div *ngIf="erroLogin" class="alert alert-danger" role="alert">
-        {{ mensagemErro }}
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="panel panel-default">
-        <div class="panel-body">
-          <form>
-            <div class="form-group ">
-              <label for="email">Email</label>
-              <input #email class="form-control" id="email" type="text"/>
-            </div>
-            <div class="form-group">
-              <label for="senha">Senha</label>
-              <input #senha class="form-control" id="senha" type="password"/>
-            </div>
-            <div class="form-group check">
-              <input id="remember" type="checkbox"> <label for="remember">Lembrar-se</label>
-            </div>
-            <div class="form-group">
-              <button (click)="logar(email.value, senha.value)" class="btn btn-primary">Entrar</button>
-              <a class="pull-right linkVoltar" routerLink="">Voltar</a>
-            </div>
-          </form>
-        </div>
-      </div>
+    <div class="col s10 offset-s1 col m8 offset-m2 col l6 offset-l3">
+      <div class="card-panel">        
+        <form #f="ngForm" (ngSubmit)="logar()">
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input class="form-control" name="email" id="email" type="text" required #email='ngModel' [(ngModel)]='usuario.email'/>
+          </div>
+          <div class="form-group">
+            <label for="senha">Senha</label>
+            <input class="form-control" name="senha" id="senha" type="password" required #senha='ngModel' [(ngModel)]='usuario.senha'/>
+          </div>
+          <div class="form-group">
+            <input name="remember" id="remember" type="checkbox" ngModel><label for="remember">Lembrar-se</label>
+          </div>
+          <br>
+          <div class="form-group">
+            <button class="waves-effect waves-light btn btn-primary">Entrar</button>
+          </div>
+        </form>
+      </div>      
     </div>
   </div>
 </div>

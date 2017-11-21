@@ -4,10 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { SocioComponent } from './socio.component';
 
 const rotas: Routes = [
-    {
-        path: '',
-        component: SocioComponent
-    }
+    { path: 'dash', component: SocioComponent }
 ]
 
-export const rounting: ModuleWithProviders = RouterModule.forChild(rotas);
+export const routing: ModuleWithProviders = RouterModule.forChild(rotas);

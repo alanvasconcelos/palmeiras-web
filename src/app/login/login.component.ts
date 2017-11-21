@@ -8,24 +8,18 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent {
 
-  erroLogin;
-  mensagemErro = "Email ou senha inválidos";
+  usuario: any = {
+    email: null,
+    senha: null
+  }
 
   constructor(
     private router: Router
-  ) {
-    this.erroLogin = false;
-  }
+  ) {}
 
-  logar(email, senha) {
-    if (email === 'socio' && senha === 'socio') {
-      //redireciona
-      this.router.navigate(['socio']);
-      console.log(email);
-      console.log(senha);
-    } else {
-      this.erroLogin = true;
-    }
-
+  logar() {
+    if (this.usuario.email === 'socio' && this.usuario.senha === 'socio') {
+      this.router.navigate(['/socio/dash']);
+    } 
   }
 }

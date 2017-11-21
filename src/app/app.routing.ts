@@ -5,14 +5,10 @@ import { LoginComponent } from './login/login.component';
 import { BlogComponent } from './blog/blog.component';
 
 const rotas: Routes = [
-    {
-        path: '',
-        component: BlogComponent
-    },
-    {
-        path: 'login',
-        component: LoginComponent
-    }
+    { path: '', pathMatch: 'full', redirectTo: 'blog' },
+    { path: 'blog', component: BlogComponent },
+    { path: 'login', component: LoginComponent },
+    { path: 'socio', loadChildren: 'app/socio/socio.module#SocioModule' }
 ]
 
 export const routing: ModuleWithProviders = RouterModule.forRoot(rotas);

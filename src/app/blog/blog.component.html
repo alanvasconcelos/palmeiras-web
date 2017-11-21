@@ -1,25 +1,17 @@
-<nav class="navbar navbar-default">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#home">LOGO</a>
+<div class="navbar-fixed">
+  <nav>
+    <div class="container">
+      <div class="nav-wrapper">
+        <ul id="nav-mobile" class="hide-on-med-and-down">
+          <li ><a routerLinkActive="active" href="blog#home">Home</a></li>
+          <li routerLinkActive="active"><a href="blog#sejaSocio">Seja sócio</a></li>
+          <li routerLinkActive="active"><a href="blog#conheca">Espaço</a></li>
+          <li class="right"><a routerLink="/login">Área do sócio</a></li>
+        </ul>
+      </div>
     </div>
-    <div class="collapse navbar-collapse" id="navbar-collapse">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="#home">Home <span class="sr-only">(current)</span></a></li>
-        <li><a href="#contato">Contato</a></li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a routerLink="login">Área do sócio</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
+  </nav>
+</div>
 
 <!-- Carousel 
 <section id="home">
@@ -30,14 +22,8 @@
       <li data-target="#carousel" data-slide-to="2"></li>
     </ol>
     <div class="carousel-inner" role="listbox">
-      <div class="item active">
-        <img class="first-slide" src="http://3.bp.blogspot.com/--ikxZDTXwQw/VpJJGwtVHDI/AAAAAAAA-jA/-czBH6T_t_M/s400/12511771_897259163715203_507232423_n.jpg" alt="Vista aérea da piscina">
-      </div>
       <div class="item">
-        <img class="second-slide" src="http://3.bp.blogspot.com/-eky4wayZIwY/VBjJD7sEWpI/AAAAAAAAAIE/LG6A_owuBQM/s1600/_DSC0472.JPG" alt="Piscina das crianças">
-      </div>
-      <div class="item">
-        <img class="third-slide" src="http://2.bp.blogspot.com/-RE-l_R0qso4/VBjHu-F6S_I/AAAAAAAAAHg/WgAMqz3uUdE/s1600/_DSC0469.JPG" alt="Toboagua">
+        <img class="third-slide" >
       </div>
     </div>
     <a class="left carousel-control" href="#carousel" role="button" data-slide="prev">
@@ -51,10 +37,41 @@
   </div>
 </section> -->
 
-<section id="contato">
+<div class="section" id="home">
+  <div class="container">
+    <div #carousel class="carousel carousel-slider center" data-indicators="true">
+      <div class="carousel-fixed-item center">
+        <a class="btn waves-effect white grey-text darken-text-2">Seja Sócio</a>
+      </div>
+      <div class="carousel-item" href="#one!">
+        <img src="http://3.bp.blogspot.com/--ikxZDTXwQw/VpJJGwtVHDI/AAAAAAAA-jA/-czBH6T_t_M/s400/12511771_897259163715203_507232423_n.jpg" alt="Vista aérea da piscina">
+      </div>
+      <div class="carousel-item" href="#two!">
+        <img src="http://3.bp.blogspot.com/-eky4wayZIwY/VBjJD7sEWpI/AAAAAAAAAIE/LG6A_owuBQM/s1600/_DSC0472.JPG" alt="Piscina das crianças">
+      </div>
+      <div class="carousel-item" href="#three!">
+        <img src="http://2.bp.blogspot.com/-RE-l_R0qso4/VBjHu-F6S_I/AAAAAAAAAHg/WgAMqz3uUdE/s1600/_DSC0469.JPG" alt="Toboagua">
+      </div>
+    </div>
+  </div>
+</div>
 
-</section>
+<div class="divider"></div>
+<div class="section" id="sejaSocio">
+  <h1>SEJA SÓCIO</h1>
+</div>
+<div class="divider"></div>
+<div class="section" id="conheca">
+  <h1>CONHEÇA</h1>
+</div>
 
-<footer>
-
+<footer class="page-footer">
+  <div class="container">
+    Copyright {{ anoAtual }} © Palmeiras Country Clube
+    <div class="right">
+      <a>face</a>
+      <a>insta</a>
+    </div>
+  </div>
 </footer>
+

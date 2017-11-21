@@ -1,15 +1,9 @@
 .alert {
   margin-top: 70px;
 }
-.panel {
-  margin-top: 20px;
+.card-panel {
+  margin-top: 70px;
 }
-.check label {
-  font-weight: normal;
-}
-.check label:hover {
-  cursor: pointer;
-}
-.linkVoltar {
-  margin-top: 8px;
+.ng-invalid:not(form).ng-touched {
+  border-bottom: 2px solid #E00000;
 }
