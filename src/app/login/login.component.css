@@ -1,9 +1,6 @@
-.alert {
-  margin-top: 70px;
-}
 .card-panel {
   margin-top: 70px;
 }
 .ng-invalid:not(form).ng-touched {
-  border-bottom: 2px solid #E00000;
+  border-bottom: 2px solid #c62828;
 }
