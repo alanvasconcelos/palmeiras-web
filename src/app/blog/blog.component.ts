@@ -10,14 +10,15 @@ declare var $: any;
 export class BlogComponent implements OnInit {
 
   @ViewChild("carousel") carousel: ElementRef;
+  @ViewChild("navbar") navbar: ElementRef;
   anoAtual: number;
 
-  constructor() {
-  }
+  constructor() {}
   
   ngOnInit() {
     this.anoAtual = new Date().getFullYear();
     $(this.carousel.nativeElement).carousel();
+    $(this.navbar.nativeElement).sideNav();
   }
 
 }
