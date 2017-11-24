@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
-import { routing } from './app.routing';
+import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { BlogComponent } from './blog/blog.component';
@@ -17,8 +17,8 @@ import { SocioModule } from './socio/socio.module';
   imports: [
     BrowserModule,
     FormsModule,
-    routing,
-    SocioModule
+    SocioModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
