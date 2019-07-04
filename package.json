@@ -9,7 +9,9 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "postinstall": "ng build --aot -prod",
-    "start": "node server.js"
+    "start": "node server.js",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "private": true,
   "dependencies": {
@@ -28,7 +30,8 @@
     "express": "^4.16.2",
     "materialize-css": "^0.100.2",
     "rxjs": "^5.4.2",
-    "zone.js": "^0.8.14"
+    "zone.js": "^0.8.14",
+    "snyk": "^1.189.0"
   },
   "devDependencies": {
     "@angular/language-service": "^4.2.4",
@@ -51,5 +54,6 @@
   },
   "engines": {
     "node": "6.11.3"
-  }
+  },
+  "snyk": true
 }
